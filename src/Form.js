@@ -4,28 +4,31 @@ import '../src/index.css';
 
 class Form extends React.Component {
     constructor(props) {
-        super(props);
-        this.state = { property1: "value" }
+        super(props)
+        this.state = { username: "" }
+    }
+    
+    myChangeHandler = (event) => {
+        this.setState({username: event.target.value})
     }
     
     render() {
         return (
-            <React.Fragment>
-            <div class="container">
-                <div class="form-input">
+            <div className="container">
+                <div className="form-input">
                     <h1>Form</h1>
                     <form>
                         <label>
                         Name: 
-                            <input type="text" />
+                            <input type="text" onChange={this.myChangeHandler} />
                         </label>
                     </form>
                 </div>
-                <div class="form-output">
+                <div className="form-output">
                     <h1>Output</h1>
+                    <p>Name: {this.state.username}</p>
                 </div>
             </div>
-            </React.Fragment>
         )
     }
 }
