@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../src/index.css';
 import Form from './Form';
-import ImmutableForm from './ImmutableForm';
-import ImmutableMovies from './Movies';
+import FormSubmission from './FormSubmission';
 
-ReactDOM.render(<ImmutableForm />, document.getElementById('root'));
+ReactDOM.render(<FormSubmission />, document.getElementById('root'));

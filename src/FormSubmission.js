@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../src/index.css';
 
-class ImmutableForm extends React.Component {
+class FormSubmission extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -50,4 +50,4 @@ class ImmutableForm extends React.Component {
     }
 }
 
-export default ImmutableForm;
+export default FormSubmission;
