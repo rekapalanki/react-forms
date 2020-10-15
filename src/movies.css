@@ -1,0 +1,13 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.card {
+  width: 200px;
+  padding: 10px;
+  background-color: #eee;
+}
+
+img {
+  width: 100%;
+}
