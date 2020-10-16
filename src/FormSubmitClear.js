@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../src/index.css';
 
-class FormSubmission extends React.Component {
+class FormSubmitClear extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,10 +19,10 @@ class FormSubmission extends React.Component {
     
     mySubmitHandler = (event) => {
         event.preventDefault();
-        alert(`You are submitting ${this.state.users.user1.name}.`);
-        const users = { ...this.state.users };
-        users.user1.name = "";
-        this.setState({users: users});
+        alert(`You are submitting ${this.state.users.user1.name}.`); //Kiíratjuk, hogy elküldjük ezt a nevet - valójában nem küldjük el sehova az előző parancs miatt.
+        const users = { ...this.state.users }; //A form kiürítéséhez az immutability szabály miatt először másoljuk a state értékét. 
+        users.user1.name = ""; //Az előbb megadott users konstans user1.name attribute-ját egyenlővé tesszük ""-vel, azaz üres értéket rendereljen ki az XML. 
+        this.setState({users: users}); //A setState() metódussal kapcsoljuk hozzá a fenti értéket a state-hez. 
     }
     
     myChangeHandler = (event) => {
@@ -53,4 +53,4 @@ class FormSubmission extends React.Component {
     }
 }
 
-export default FormSubmission;
+export default FormSubmitClear;

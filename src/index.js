@@ -3,5 +3,6 @@ import ReactDOM from 'react-dom';
 import '../src/index.css';
 import Form from './Form';
 import FormSubmission from './FormSubmission';
+import FormSubmitClear from './FormSubmitClear';
 
-ReactDOM.render(<FormSubmission />, document.getElementById('root'));
+ReactDOM.render(<FormSubmitClear />, document.getElementById('root'));
