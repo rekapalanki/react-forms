@@ -20,9 +20,6 @@ class FormSubmission extends React.Component {
     mySubmitHandler = (event) => {
         event.preventDefault();
         alert(`You are submitting ${this.state.users.user1.name}.`);
-        const users = { ...this.state.users };
-        users.user1.name = "";
-        this.setState({users: users});
     }
     
     myChangeHandler = (event) => {
