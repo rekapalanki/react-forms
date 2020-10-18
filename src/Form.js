@@ -2,14 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '../src/index.css';
 
-class Form extends React.Component {
+class ImmutableForm extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { username: "" }
+        this.state = {
+            person: {
+                username: 'My name'
+            }
+        }
+        
+        this.myChangeHandler = this.myChangeHandler.bind(this)
     }
     
     myChangeHandler = (event) => {
-        this.setState({username: event.target.value})
+        const person = { ...this.state.person }
+        person.username = event.target.value //Immutable state: 
+        this.setState({
+            person: person
+        })
     }
     
     render() {
@@ -26,11 +36,11 @@ class Form extends React.Component {
                 </div>
                 <div className="form-output">
                     <h1>Output</h1>
-                    <p>Name: {this.state.username}</p>
+                    <p>Name: {this.state.person.username}</p>
                 </div>
             </div>
         )
     }
 }
 
-export default Form;
+export default ImmutableForm;
